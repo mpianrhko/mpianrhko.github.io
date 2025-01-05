@@ -3,25 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Website of Minho Park">
-    <title>Minho Park</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-    </style>
+    <title>Minho Park - Data Science</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Minho Park</h1>
+    <header>
+        <nav>
+            <ul class="nav-tabs">
+                <li class="tab active" data-tab="introduction">Introduction</li>
+                <li class="tab" data-tab="resume">Resume</li>
+                <li class="tab" data-tab="projects">Projects</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduction" class="tab-content active">
+            <h1>Minho Park</h1>
+            <p>Creative and Efficient Problem Solver | Fast Learner Eager to Contribute in Data Science | Actively Seeking Opportunities</p>
+        </section>
+
+        <section id="resume" class="tab-content">
+            <h2>Resume</h2>
+            <p>[Resume Content Here]</p>
+            <!-- Include a downloadable PDF or a detailed resume here -->
+        </section>
+
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project One</h3>
+                <p>Description.</p>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>Description.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minho Park. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
