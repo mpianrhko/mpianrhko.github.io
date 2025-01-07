@@ -101,14 +101,32 @@ main {
   margin-bottom: 8px;
 }
 
-.social-links a {
-  margin-right: 15px;
+/* Container for social links */
+.social-links {
+  display: flex;
+  justify-content: flex-end; /* Right align the items */
+  gap: 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Style for each social link */
+.social-item {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #333;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+/* Add some spacing between icon and text */
+.social-item i {
+  margin-right: 8px;
+}
+
+/* Hover effect for social links */
+.social-item:hover {
   color: #555;
 }
 
