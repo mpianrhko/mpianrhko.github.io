@@ -1,89 +1,158 @@
-/* Reset some default styles */
+/* Reset and basic styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #feffd9;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #feffd9;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Fancy logo styling */
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Header and Navigation */
 header {
-    background-color: #fef6c0;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fef6c0;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Ensure the header content stays on top of the PARK logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  margin: 0 auto;
 }
 
 .nav-tabs {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 120px; /* Space to the right of the PARK logo */
 }
 
 .nav-tabs .tab {
-    margin: 0 15px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-    background-color: #fff8e1;
+  margin: 0 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  background-color: #fff8e1;
 }
 
 .nav-tabs .tab:hover {
-    background-color: #fff3b0;
+  background-color: #fff3b0;
 }
 
 .nav-tabs .active {
-    background-color: #ffe58f;
-    font-weight: bold;
+  background-color: #ffe58f;
+  font-weight: bold;
 }
 
+/* Main content styling */
 main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+  max-width: 800px;
+  margin: 80px auto 40px; /* Top margin adjusted to accommodate the fixed header/logo */
+  padding: 0 20px;
 }
 
 .tab-content {
-    display: none;
-    animation: fadeIn 0.5s ease-in;
+  display: none;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .tab-content.active {
-    display: block;
+  display: block;
 }
 
+/* Introduction contact info styling */
+.contact-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.contact-info p,
+.contact-info .social-links a {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #555;
+}
+
+/* Project styling */
 .project {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #fffbe6;
-    border-left: 4px solid #ffd700;
-    border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fffbe6;
+  border-left: 4px solid #ffd700;
+  border-radius: 5px;
 }
 
+/* Footer styling */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #fef6c0;
-    margin-top: 40px;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fef6c0;
+  margin-top: 40px;
 }
 
+/* Keyframes and responsive design */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
-    .nav-tabs {
-        flex-direction: column;
-    }
+  .nav-tabs {
+    flex-direction: column;
+    margin-left: 0;
+  }
 
-    .nav-tabs .tab {
-        margin: 10px 0;
-    }
+  .nav-tabs .tab {
+    margin: 10px 0;
+  }
+
+  .logo {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
 }
