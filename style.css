@@ -13,10 +13,15 @@ body {
 }
 
 /* Fancy logo styling */
-.logo {
+.logo a {
   font-family: 'Libre Bodoni', cursive;
   font-size: 2.5em;
   padding: 10px 20px;
+  color: inherit;        /* Inherit color from parent */
+  text-decoration: none; /* Remove default link underline */
+}
+
+.logo {
   position: absolute;
   top: 0;
   left: 0;
